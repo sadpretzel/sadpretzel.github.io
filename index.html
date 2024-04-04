@@ -1,0 +1,176 @@
+<html>
+
+<head>
+<title>Eleanor Pitcher's Webpage</title>
+</head>
+
+<body BGCOLOR=Linen TEXT=SeaGreen>
+<h1><Br><CENTER>Know a little more about me...</CENTER></h1><HR width=75%>
+<p><CENTER><FONT SIZE=5><Br>Listen to this song while you read...<Br>
+<audio controls>
+	<source src=music.mp3 type=audio/mpeg>
+</audio>
+<Br>I'm <B>really</B> excited to be learning more about Computer Science. It's something that I never <Br>got to explore in high school and I'm so excited to be learning some coding! It is a <I>little</I> scary <Br>that this is like, the actual internet that I am putting this on. I don't know how to feel about that. <Br>I think it is pretty cool though!</p>
+<p>For now I'm going to focus on the fun part! I can write things like Kaylee &amp; Ella. Or I could <Br>say it like Ella &hearts; Kaylee. We could also play a game of cards, we have &spades;, &hearts;, &clubs;, and &diams;! I don't <Br>think I'm ready to code a game of cards yet. I don't even know how cards in real life works. It's <Br> okay though. I already have too many things to say.</p>
+<p>While I have your attention, I'd like to direct your eyes to my little flower garden here.<Br><Br>🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷<Br>🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷<Br>🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷<Br>🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷<Br>🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷<Br>🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷<Br><Br>You can also follow <a HREF=https://www.instagram.com/sigmabetaligma?igsh=MXhibjFlemM4dTlpMg%3D%3D&utm_source=qr>Sigma Beta Ligma</a> on Instagram. This will be you if you follow them.<Br><Br><img src=girl_eating_vegetable.jpg></CENTER></p>
+<p>Also check out my list of favorite movies...<ul>
+<li>10 Things I Hate About You
+<li>Spiderman: Into the Spiderverse
+<li>Dirty Dancing
+<li>Ferris Bueller's Day Off
+<li>How To Lose A Guy in 10 Days
+</ul>
+<table>
+<tr>
+<th>RANK&nbsp;</th>
+<th>TITLE</th>
+<th>GENRE</th>
+</tr>
+<tr>
+<td>HIGH&nbsp;</td>
+<td>10 Things I Hate About You&nbsp;</td>
+<td>Rom-com</td>
+</tr>
+<tr>
+<td>MEDIUM&nbsp;</td>
+<td>Airplane!&nbsp;</td>
+<td>Comedy</td>
+</tr>
+<tr>
+<td>LOW&nbsp;</td>
+<td>The Conjuring&nbsp;</td>
+<td>Horror</td>
+</tr>
+</p>
+<p><CENTER>If you enjoyed this little website, please enter your email so I can send you a gift.<Br><Br>
+<form>
+<label for=name>Name:</label><br>
+<input type=text id=name name=name><br>
+<label for=email>Email:</label><br>
+<input type=text id=email name=email><br>
+<input type=submit value=Submit><br>
+</form><Br><Br>
+Enjoy this video...<Br>
+<video width="320" height="240" controls>
+  <source src="cat_video.mp4" type="video/mp4">
+</video>
+</CENTER></p>
+    
+   
+  <div style="margin-left: auto; margin-right: auto; margin-top: 40px;
+  padding: 20px; width: 500px; font-size: 16px; font-family:'Segoe UI', sans-serif;">
+  Ella-Bot👧
+ 
+ <div style=" margin-top:6px; padding: 20px; background-color: #E1F4FB;
+ border: 4px solid #8ec8df; border-radius: 25px;">
+
+  <form name="chatForm">
+      <p id="botSays">What is your name ? </p>
+      <br>         
+      <input type="text" name="userInput" >
+      <input type="button" value="Send" onClick="displayFeedback(this.form)">
+
+  </form>
+ </div>
+ </div>  
+
+<script>
+
+var counter=0;
+var totalQuestions=6;
+
+var myGraduationYear= 2027;
+var myMajor="film/media/theater";
+var myFavFlower="roses";
+var myFavMusicArtist="beabadoobee";
+
+var majorInterestedList=["sociology", "computer science", "datascience", "economics" ];
+var favArtistList=["foo fighters","eminem","tyler the creator","lady gaga", "weezer","dominic fike","deftones","green day"];
+
+var userName;
+
+  function displayFeedback(form) {
+
+      counter++;
+
+      var feedbackText="";
+      var newQuestionText="";
+
+      var userInput= form.userInput.value;
+
+      if (counter==1) {        
+          userName= userInput;
+          feedbackText="Hello, "+ userName+" !" +"<br>Nice to meet you."+
+          "I am Ella, a freshman at Mount Holyoke College.";
+
+          newQuestionText="Do you also attend Mount Holyoke College ?"; 
+                 
+      }
+
+      if (counter==2) {        
+          feedbackText="Thanks for sharing."; 
+          newQuestionText="What is your major?";              
+      }
+
+      if (counter==3) {     
+          if (userInput.toLowerCase()== myMajor) feedbackText="Great! I also want to major in "+ userInput+"."; 
+          
+          else {
+              feedbackText="I think "+userInput+" is very interesting."+" I "+myMajor+" what to major in.";
+              
+              //check if user's major is one the majors in your majorInterestedList 
+              for (let i = 0; i < majorInterestedList.length; i++) {      
+                  if (userInput.toLowerCase() == majorInterestedList[i]) {
+                      feedbackText=userInput+ " was one of the majors I was interested in.";
+                  }    
+              }
+
+      newQuestionText="When are you graduating ?"; 
+      }
+  }
+
+      if (counter==4) {     
+          if (userInput== myGraduationYear) feedbackText="I am also graduating the same year ! ";  
+          else if (userInput< myGraduationYear) feedbackText="Nice. You will be graduating earlier than me."; 
+          else if (userInput> myGraduationYear) feedbackText="Nice. I will be graduating in "+ myGraduationYear+", a bit later than you.";
+          else feedbackText="Thanks for sharing.";  
+
+      newQuestionText="What are your favorite flowers?"; 
+      }
+
+      if (counter==5) {     
+          if (userInput.toLowerCase()== myFavFlower) feedbackText="Great! I also love "+userInput;
+          else feedbackText="Nice. "+userInput+"are very pretty flowers.";  
+
+      newQuestionText="What is your favorite musician?"; 
+      }
+
+      if (counter==6) {     
+          if (userInput.toLowerCase()== myFavMusicArtist) feedbackText="I LOVE "+ userInput+"."; 
+          
+          else {
+              feedbackText="I've never heard of"+userInput;
+              
+              //check if user's major is one the majors in your favArtistList 
+              for (let i = 0; i <favArtistList.length; i++) {      
+                  if (userInput.toLowerCase() == favArtistList[i]) {
+                      feedbackText="I really like "+userInput;
+                  }    
+              }
+      }
+  }
+      //if you have reached the last question
+      if (counter>=totalQuestions ) {
+          feedbackText=feedbackText+"<br><br>It was nice talking to you, "+userName+"."+
+          "<br>I hope you have a great day!";           
+  
+      }
+      //update the feedback and clear the input box
+      document.getElementById("botSays").innerHTML = feedbackText+ "<br><br>"+newQuestionText;   
+      form.userInput.value=""; 
+   }
+  
+</script>
+</body>
+
+</html>
