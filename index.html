@@ -1,0 +1,110 @@
+<html>
+<body>
+
+    <table>
+        <tr>
+            <th>Flowers</th>
+            <th>Unit Price</th>
+            <th>Quantity Available</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>rose</li>
+                    <li>lavender</li>
+                    <li>lilac</li>
+                    <li>hibiscus</li>
+                    <li>marigold</li>
+                    <li>iris</li>
+                    <li>tulip</li>
+                    <li>peony</li>
+                    <li>daisy</li>
+                    <li>poppy</li>
+                    <li>sunflower</li>
+                    <li>orchid</li>
+                    <li>lily</li>
+                </ul>            
+            </td>
+            <td>
+                <ul>
+                    <li>$5</li>
+                    <li>$3</li>
+                    <li>$3</li>
+                    <li>$7</li>
+                    <li>$4</li>
+                    <li>$4</li>
+                    <li>$2</li>
+                    <li>$6</li>
+                    <li>$3</li>
+                    <li>$3</li>
+                    <li>$10</li>
+                    <li>$16</li>
+                    <li>$6</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>500</li>
+                    <li>200</li>
+                    <li>250</li>
+                    <li>100</li>
+                    <li>100</li>
+                    <li>200</li>
+                    <li>200</li>
+                    <li>300</li>
+                    <li>200</li>
+                    <li>100</li>
+                    <li>400</li>
+                    <li>100</li>
+                    <li>300</li>
+                </ul>
+            </td>
+        </tr>
+    </table>    
+   
+    <form name="flowerShopForm">
+        Flower name: <input type="text" name="flowerNameInput" >
+        <br><br>
+        Flower quantity: <input type="number" name="flowerQuantityInput" >
+        <br><br>
+        <input type="button" value="Submit" onClick="displayFeedback(this.form)">
+    </form>
+    <p id="feedbackParagraph"></p>
+
+<script>
+var flowerList = ['rose', 'lavender', 'lilac', 'hibiscus', 'marigold', 'iris', 'tulip', 'peony', 'daisy', 'poppy', 'sunflower', 'orchid', 'lily'];
+var priceList = [5,3,3,7,4,4,2,6,3,3,10,16,6];  
+var quantityList = [500,200,250,100,100,200,200,300,200,100,400,100,300];
+
+    function displayFeedback(form) {
+     
+        var flowerInput = form.flowerNameInput.value;
+        var flowerQuantity = form.flowerQuantityInput.value;
+
+        var flowerAvailable= false;
+        var quantityAvailable= false;
+        var totalCost= 0;
+        var feedbackText="";  
+
+
+        for (let i = 0; i < flowerList.length; i++) {      
+            if (flowerInput == flowerList[i]) {
+                flowerAvailable= true;     
+                 if (flowerQuantity<=quantityList[i]){
+                 quantityAvailable= true;
+                 totalCost = flowerQuantity * priceList[i];
+                }
+            }
+        }
+
+
+        if (flowerAvailable== false) feedbackText= "Sorry, we don't have that flower.";
+        else if (quantityAvailable== false) feedbackText="Sorry! We don't have enough of that flower.";
+        else feedbackText= "The total cost: $"+ totalCost;
+       
+        document.getElementById("feedbackParagraph").innerHTML = feedbackText;                
+    }
+</script>
+
+</body>
+</html>
